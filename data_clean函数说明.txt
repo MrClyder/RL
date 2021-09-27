@@ -1,0 +1,15 @@
+获取因子数据示例：
+函数：factor_data(source_path,time_interval,save_path)  ## time_interval 单位为毫秒，1000=1s
+目的：将该路径下的所有表的数据进行处理，并保存到目标文件
+
+from data_clean import as *
+
+source_path = '/home/dl/Desktop/data/ETH_swap_data/data'
+time_interval = 10000 #10s.  #60s = 60000
+save_path = '/home/dl/Desktop/data/ETH_swap_data'  ##保存的数据路径，自定义
+df = factor_data(source_path,time_interval,save_path)
+
+可以得到7.24日eth永续合约间隔10s的因子数据，
+其中包括[ts,price,POC,delta,POC_signal,Delta_signal] 6列数据
+
+##24，25，26，27这几天数据都为完整数据
